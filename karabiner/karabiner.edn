@@ -1,0 +1,15 @@
+{:profiles
+ {:goku {:default true
+         :alone   1000 ; hold for .. ms to register single tap
+         :held    500 ; TODO: not sure what it's for
+         :delay   500 ; time after which the key press is delayed
+         :sim     50}} ; keys need to be pressed within this threshold to be considered simultaneous
+ :simlayers {
+        :caps-mode {:key :caps_lock}
+        }       
+ {:main [{:des "caps lock to hyper (left_shift+left_control+left_option+left_command or escape"
+        :rules [
+        [:caps_lock :!CTOS]
+        [:caps_lock :escape nil {:alone}]]}
+        ]}
+}
