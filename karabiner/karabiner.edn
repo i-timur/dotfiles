@@ -1,15 +1,17 @@
 {:profiles
- {:goku {:default true
-         :alone   1000 ; hold for .. ms to register single tap
-         :held    500 ; TODO: not sure what it's for
-         :delay   500 ; time after which the key press is delayed
-         :sim     50}} ; keys need to be pressed within this threshold to be considered simultaneous
- :simlayers {
-        :caps-mode {:key :caps_lock}
-        }       
- {:main [{:des "caps lock to hyper (left_shift+left_control+left_option+left_command or escape"
-        :rules [
-        [:caps_lock :!CTOS]
-        [:caps_lock :escape nil {:alone}]]}
-        ]}
-}
+ {:Default {:default true
+           :sim 30
+           :delay 0
+           :alone 80; cancellation happens when you press the from key ... ms long, actually I dont understand why I shoud make it value less) 
+           :held 50}}
+ :simlayers {:s-mode {:key :s}}
+ :main [{:des "skey"
+         :rules [:s-mode
+                 [:##j :down_arrow]
+                 [:##k :up_arrow]
+                 [:##h :left_arrow]
+                 [:##l :right_arrow]]}
+        {:des "caps_lock to esc when pressed alone, to ctrl as modifier"
+         :rules [[:##caps_lock [:left_control :left_option] nil {:alone :escape}]]}
+        {:des "commad shift to toggle keyboard language"
+         :rules [[:!Cleft_shift :!Cleft_shift nil {:alone :!Tspacebar}]]}]}
