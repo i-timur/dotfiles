@@ -11,7 +11,8 @@
              :e-mode {:key :e}
              :a-mode {:key :a}
              :i-mode {:key :i}
-             :f-mode {:key :f}}
+             :f-mode {:key :f}
+             :d-mode {:key :d}}
  :main [{:des "skey"
          :rules [:s-mode
                  [:w [:!Oleft_arrow :!OSright_arrow]] ; Highlight word 
@@ -29,12 +30,15 @@
          :rules [[:##caps_lock [:left_control :left_option] nil {:alone :escape}]]}
         {:des "commad shift to toggle keyboard language"
          :rules [[:!Cleft_shift :!Tspacebar]]}
+        {:des "dkey (mouse)"
+         :rules [:d-mode 
+                 [:b {:pkey :button3}]]}
         {:des "ikey (symbols)"
          :rules [:i-mode
                  [:1 :!S1]
                  [:2 :!S2]
                  [:j :equal_sign]
-                 [:u :!Ssemicolon]
+                 [:g :!Ssemicolon]
                  [:j :equal_sign]
                  [:f :hyphen]
                  [:r :!Squote]
