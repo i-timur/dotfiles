@@ -9,7 +9,9 @@
              :semicolon-mode {:key :semicolon}
              :q-mode {:key :q}
              :e-mode {:key :e}
-             :a-mode {:key :a}}
+             :a-mode {:key :a}
+             :i-mode {:key :i}
+             :f-mode {:key :f}}
  :main [{:des "skey"
          :rules [:s-mode
                  [:w [:!Oleft_arrow :!OSright_arrow]] ; Highlight word 
@@ -27,6 +29,21 @@
          :rules [[:##caps_lock [:left_control :left_option] nil {:alone :escape}]]}
         {:des "commad shift to toggle keyboard language"
          :rules [[:!Cleft_shift :!Tspacebar]]}
+        {:des "ikey (symbols)"
+         :rules [:i-mode
+                 [:1 :!S1]
+                 [:2 :!S2]
+                 [:j :equal_sign]
+                 [:u :!Ssemicolon]
+                 [:j :equal_sign]
+                 [:f :hyphen]
+                 [:r :!Squote]
+                 [:t :quote]
+                 [:o :open_bracket]
+                 [:p :close_bracket]
+                 [:3 :!Sequal_sign]
+                 [:q :!Sopen_bracket]
+                 [:w :!S9]]}
         {:des "semicolon (shift)"
          :rules [:semicolon-mode
                  [:q :!Sq]
@@ -184,4 +201,7 @@
                  [:m :!Tm]
                  [:comma :!Tcomma]
                  [:period :!Tperiod]
-                 [:slash :!Tslash]]}]}
+                 [:slash :!Tslash]]}
+        {:des "fkey (essential)"
+         :rules [:f-mode
+                 [:z [:!Tspacebar]]]}]}
