@@ -32,6 +32,8 @@
          :rules [[:!Cleft_shift :!Tspacebar]]}
         {:des "dkey (mouse)"
          :rules [:d-mode 
+                 [:i :!Ckeypad_hyphen] ; Zoom out
+                 [:o :!Ckeypad_plus] ; Zoom in
                  [:b {:pkey :button3}]]}
         {:des "ikey (symbols)"
          :rules [:i-mode

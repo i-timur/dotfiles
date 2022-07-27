@@ -16,12 +16,17 @@ set termguicolors
 
 " NVim configuration
 
-set relativenumber
+set number
 
 set tabstop=4
 set shiftwidth=4
 set smarttab
 set cindent
+
+" 3 lines below fixing visual bug changing cursor view with a delay when switching between modes
+set ttimeout
+set ttimeoutlen=1
+set ttyfast
 
 " always uses spaces instead of tab characters
 set expandtab
