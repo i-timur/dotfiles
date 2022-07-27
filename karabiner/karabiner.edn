@@ -27,7 +27,7 @@
                  [:##h :left_arrow]
                  [:##l :right_arrow]]}
         {:des "caps_lock to esc when pressed alone, to ctrl as modifier"
-         :rules [[:##caps_lock [:left_control :left_option] nil {:alone :escape}]]}
+         :rules [[:##caps_lock [:left_control :left_option] nil {:alone :escape :params {:alone 1000}}]]}
         {:des "commad shift to toggle keyboard language"
          :rules [[:!Cleft_shift :!Tspacebar]]}
         {:des "dkey (mouse)"
@@ -37,6 +37,7 @@
          :rules [:i-mode
                  [:1 :!S1]
                  [:2 :!S2]
+                 [:4 :!S4]
                  [:j :equal_sign]
                  [:g :!Ssemicolon]
                  [:j :equal_sign]
