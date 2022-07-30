@@ -43,7 +43,8 @@
                  [:4 :!S4]
                  [:5 :!S5]
                  [:q :!Sopen_bracket]
-                 [:w :!S9]
+                 [:w :!S9] ; (
+                 [:y :!S0] ; ) 
                  [:e :!S3]
                  [:r :!Squote]
                  [:t :quote]

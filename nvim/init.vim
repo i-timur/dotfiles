@@ -6,7 +6,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'ryanoasis/vim-devicons'
   Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-	Plug 'doums/darcula'
+    Plug 'doums/darcula'
   Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
@@ -18,8 +18,8 @@ set termguicolors
 
 set number
 
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set smarttab
 set cindent
 
