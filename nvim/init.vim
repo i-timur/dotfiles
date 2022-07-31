@@ -6,13 +6,18 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'ryanoasis/vim-devicons'
   Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-    Plug 'doums/darcula'
+  Plug 'doums/darcula'
   Plug 'jiangmiao/auto-pairs'
 call plug#end()
+
+if has ("nvim")
+  Plug 'neovim/nvim-lspconfig'
+endif
 
 colorscheme darcula
 
 set termguicolors
+colorscheme NeoSolarized
 
 " NVim configuration
 
