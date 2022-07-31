@@ -1,15 +1,21 @@
-set -gx TERM xterm-256color
-
-# Man pages
-set -Ux MANPAGER "nvim +Man!"
-
 set fish_greeting ""
 
-# EDITOR
-set -Ux EDITOR nvim
-set -Ux VISUAL nvim
+# XDG
+set -gx XDG_CONFIG_HOME $HOME/.config
 
-# alias
+# Terminal
+set -gx TERM xterm-256color
+
+# EDITOR
+set -gx EDITOR nvim
+set -gx VISUAL nvim
+
+# Man pages
+set -gx MANPAGER "nvim +Man!"
+
+set -g tide_left_prompt_frame_enabled
+
+# Aliases
 
 # General
 alias cl="clear"
@@ -35,10 +41,3 @@ alias gpom="git push origin master"
 alias gi="git init"
 alias gl="git pull"
 alias gn="git clone"
-
-function fish_user_key_bindings
-  # bind \c] fzf_ghq      # Ctrl-]
-  # bind \cr fzf_history  # Ctrl-r
-  # bind \cj fzf_z        # Ctrl-j
-  bind \cf fzf_file     # Ctrl-f
-end
