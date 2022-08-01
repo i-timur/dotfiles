@@ -42,7 +42,8 @@ alias cl "clear"
 alias d "cd"
 alias rr "rm -rf"
 alias a "exa -l --icons"
-alias aa "exa -la" # See hidden files
+alias aa "exa -la --icons" # See hidden files
+alias t "exa -la --icons --tree --level="
 alias q "exit"
 alias ni "npm install"
 alias nd "npm run start"

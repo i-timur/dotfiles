@@ -1,20 +1,13 @@
 call plug#begin('~/.local/share/nvim/plugged')
   Plug 'christoomey/vim-tmux-navigator'
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
   "NERDTree plugins
   Plug 'preservim/nerdtree'
+  Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
   Plug 'preservim/nerdcommenter'
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'ryanoasis/vim-devicons'
-  Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-  Plug 'doums/darcula'
-  Plug 'jiangmiao/auto-pairs'
 call plug#end()
-
-if has ("nvim")
-  Plug 'neovim/nvim-lspconfig'
-endif
-
-colorscheme darcula
 
 set termguicolors
 colorscheme NeoSolarized
@@ -42,11 +35,6 @@ nmap <C-f> :NERDTreeToggle<CR>
 vmap <C-_> <plug>NERDCommenterToggle
 nmap <C-_> <plug>NERDCommenterToggle
 
-" Open NERDTree automatically
-
-" Start NERDTree and leave the cursor in it.
-" autocmd VimEnter * NERDTree
-
 " Close the tab if NERDTree is the only window remaining in it.
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
@@ -56,3 +44,6 @@ autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTa
 " map <C-j> <C-w>j
 " map <C-k> <C-w>k
 " map <C-l> <C-w>l
+
+" For scss files 
+autocmd FileType scss setl iskeyword+=@-@
