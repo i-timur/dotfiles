@@ -57,7 +57,7 @@
                  [:f :hyphen]
                  [:g :!Ssemicolon]
                  [:j :equal_sign]
-                 [:l [:hyphen :!Speriod :spacebar]] ; -> arrow (->)
+                 [:l [:!S9 :right_arrow :spacebar :equal_sign :!Speriod :spacebar :!Sopen_bracket]] ; () => {} only works with auto pairs
                  [:grave_accent_and_tilde :!Sgrave_accent_and_tilde] ; -> //
                  [:z :!Sslash]
                  [:x :!Sbackslash]
