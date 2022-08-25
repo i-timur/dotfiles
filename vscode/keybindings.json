@@ -37,8 +37,13 @@
   },
   {
     "key": "ctrl+h",
+    "command": "workbench.action.navigateLeft",
+    "when": "editorIsOpen"
+  },
+  {
+    "key": "ctrl+h",
     "command": "workbench.explorer.fileView.focus",
-    "when": "explorerViewletVisible && !filesExplorerFocus && !openEditorsFocus"
+    "when": "!editorIsOpen"
   },
   {
     "key": "ctrl+h",
@@ -47,8 +52,8 @@
   },
   {
     "key": "ctrl+l",
-    "command": "workbench.action.focusActiveEditorGroup",
-    "when": "!terminalFocus && !editorTextFocus"
+    "command": "workbench.action.navigateRight",
+    "when": "editorIsOpen"
   },
   {
     "key": "ctrl+l",
