@@ -1,5 +1,7 @@
 set fish_greeting ""
 
+bind \ch true
+
 # XDG
 set -gx XDG_CONFIG_HOME $HOME/.config
 
