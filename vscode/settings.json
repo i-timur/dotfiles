@@ -1,0 +1,29 @@
+{
+  "editor.fontSize": 16,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "editor.minimap.enabled": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.lineNumbers": "relative",
+  "editor.fontLigatures": null,
+  "editor.hover.enabled": true,
+  "prettier.semi": true,
+  "prettier.singleQuote": true,
+  "terminal.integrated.tabs.enabled": true,
+  "terminal.integrated.fontFamily": "'MesloLGS NF'",
+  "files.autoSave": "afterDelay",
+  "workbench.panel.defaultLocation": "bottom",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "Darcula",
+  "workbench.editor.enablePreview": false,
+  "javascript.updateImportsOnFileMove.enabled": "prompt",
+  "typescript.updateImportsOnFileMove.enabled": "prompt",
+  "vsicons.dontShowNewVersionMessage": true,
+  "emmet.showAbbreviationSuggestions": true,
+  "emmet.showExpandedAbbreviation": "always",
+  "emmet.includeLanguages": {
+    "vue-html": "html",
+    "vue": "html"
+  }
+}
