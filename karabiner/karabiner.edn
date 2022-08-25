@@ -7,6 +7,7 @@
 
  :simlayers {:s-mode {:key :s}
              :semicolon-mode {:key :semicolon}
+             :c-mode {:key :c}
              :q-mode {:key :q}
              :e-mode {:key :e}
              :a-mode {:key :a}
@@ -42,11 +43,11 @@
                  [:3 :!Sequal_sign]
                  [:4 :!S4]
                  [:5 :!S5]
-                 [:n :!S3] ; #
-                 [:q :!Sopen_bracket]
+                 [:n :!S8] ; *
+                 [:q :!Sopen_bracket] ; {
                  [:w :!S9] ; (
                  [:y :!S0] ; ) 
-                 [:e :!S3]
+                 [:e :!S3] ; #
                  [:r :!Squote]
                  [:t :quote]
                  [:o :open_bracket] ; [
@@ -95,6 +96,10 @@
                  [:b :!Sb]
                  [:n :!Sn]
                  [:m :!Sm]]}
+        {:des "ckey (cmd + option)"
+         :rules [:c-mode
+                 [:h :!COleft_arrow]
+                 [:l :!COright_arrow]]}
         {:des "qkey (cmd + shift)"
          :rules [:q-mode
                  [:3 :!CS3]
