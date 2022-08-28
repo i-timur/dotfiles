@@ -158,6 +158,7 @@
                  [:comma :!Ccomma]
                  [:period :!Cperiod]
                  [:slash :!Cslash]
+                 [:backslash :!Cbackslash]
                  [:a :!Ca]
                  [:b :!Cb]
                  [:c :!Cc]

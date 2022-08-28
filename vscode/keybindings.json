@@ -81,8 +81,9 @@
     "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
   },
   {
-    "key": "ctrl+e",
-    "command": "workbench.files.action.refreshFilesExplorer"
+    "key": "ctrl+r",
+    "command": "workbench.files.action.refreshFilesExplorer",
+    "when": "filesExplorerFocus && openEditorsFocus"
   },
   {
     "key": "ctrl+[",
@@ -93,5 +94,9 @@
     "key": "ctrl+]",
     "command": "workbench.action.increaseViewWidth",
     "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "-workbench.action.openRecent"
   }
 ]

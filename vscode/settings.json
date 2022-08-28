@@ -2,7 +2,7 @@
   "editor.fontSize": 16,
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
-  "editor.minimap.enabled": true,
+  "editor.minimap.enabled": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.lineNumbers": "relative",
@@ -25,5 +25,7 @@
   "emmet.includeLanguages": {
     "vue-html": "html",
     "vue": "html"
-  }
+  },
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single"
 }
