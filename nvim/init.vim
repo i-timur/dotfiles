@@ -14,8 +14,9 @@ colorscheme NeoSolarized
 
 " NVim configuration
 
-set number
+autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 
+set number relativenumber
 set tabstop=2
 set shiftwidth=2
 set smarttab
@@ -38,8 +39,7 @@ nmap <C-_> <plug>NERDCommenterToggle
 " Close the tab if NERDTree is the only window remaining in it.
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
-" Shortcutting split navigation (vim-tmux-navigator is used here, so I don`t
-" need it)
+" Shortcutting split navigation (vim-tmux-navigator is used within my plugins, which already does this this feature
 " map <C-h> <C-w>h
 " map <C-j> <C-w>j
 " map <C-k> <C-w>k

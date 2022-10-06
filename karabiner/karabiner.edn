@@ -44,6 +44,7 @@
                  [:4 :!S4]
                  [:5 :!S5]
                  [:6 :!S6] ; ^
+                 [:7 :!S7] ; . (ru)
                  [:n :!S8] ; *
                  [:q :!Sopen_bracket] ; {
                  [:w :!S9] ; (
@@ -152,6 +153,7 @@
                  [:u :!Cu]
                  [:i :!Ci]
                  [:p :!Cp]
+                 [:spacebar :!Cspacebar]
                  [:open_bracket :!Copen_bracket]
                  [:close_bracket :!Cclose_bracket]
                  [:semicolon :!Csemicolon]

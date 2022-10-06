@@ -13,6 +13,10 @@ set -gx VISUAL nvim
 # Man pages
 set -gx MANPAGER "nvim +Man!"
 
+# nvm
+set -gx NVM_DIR $HOME/.config/nvm
+[ -e $NVM_DIR/nvm.sh ]; and source $NVM_IDR/nvm.sh
+
 # Tide
 set -g tide_git_bg_color 268bd2
 set -g tide_git_bg_color_unstable C4A000
@@ -51,7 +55,7 @@ alias nb "npm run build"
 
 # Git
 alias gs "git status --short"
-alias gss "git show --word-diff color"
+alias gss "git show --word-diff=color"
 alias gb "git branch"
 alias ga "git add"
 alias gc "git commit"
@@ -62,3 +66,4 @@ alias gpom "git push origin master"
 alias gi "git init"
 alias gl "git pull"
 alias gn "git clone"
+
