@@ -1,6 +1,8 @@
 {
   "editor.fontSize": 16,
   "editor.tabSize": 4,
+  "editor.insertSpaces": false,
+  "editor.detectIndentation": false,
   "editor.wordWrap": "on",
   "editor.minimap.enabled": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -8,7 +10,6 @@
   "editor.lineNumbers": "relative",
   "editor.fontLigatures": false,
   "editor.hover.enabled": true,
-  "editor.insertSpaces": false,
   "prettier.semi": true,
   "prettier.singleQuote": true,
   "terminal.integrated.tabs.enabled": true,
