@@ -13,6 +13,7 @@
              :a-mode {:key :a}
              :i-mode {:key :i}
              :f-mode {:key :f}
+             :t-mode {:key :t}
              :d-mode {:key :d}}
  :main [{:des "skey"
          :rules [:s-mode
@@ -233,6 +234,61 @@
                  [:comma :!Tcomma]
                  [:period :!Tperiod]
                  [:slash :!Tslash]]}
+        {:des "tkey (option)"
+         :rules [:t-mode
+                 [:2 :!O2]
+                 [:3 :!O3]
+                 [:4 :!O4]
+                 [:5 :!O5]
+                 [:6 :!O6]
+                 [:7 :!O7]
+                 [:8 :!O8]
+                 [:9 :!O9]
+                 [:0 :!O0]
+                 [:q :!Oq]
+                 [:w :!Ow]
+                 [:e :!Oe]
+                 [:r :!Or]
+                 [:i :!Oi]
+                 [:o :!Oo]
+                 [:y :!Oy]
+                 [:u :!Ou]
+                 [:p :!Op]
+                 [:open_bracket :!Oopen_bracket]
+                 [:close_bracket :!Oclose_bracket]
+                 [:s :!Os]
+                 [:d :!Od]
+                 [:f :!Of]
+                 [:g :!Og]
+                 [:h :!Oh]
+                 [:j :!Oj]
+                 [:k :!Ok]
+                 [:l :!Ol]
+                 [:semicolon :!Osemicolon]
+                 [:quote :!Oquote]
+                 [:z :!Oz]
+                 [:x :!Ox]
+                 [:c :!Oc]
+                 [:v :!Ov]
+                 [:b :!Ob]
+                 [:n :!On]
+                 [:m :!Om]
+                 [:return_or_enter :!Oreturn_or_enter]
+                 [:f1 :!Of1]
+                 [:f2 :!Of2]
+                 [:f3 :!Of3]
+                 [:f4 :!Of4]
+                 [:f5 :!Of5]
+                 [:f6 :!Of6]
+                 [:f7 :!Of7]
+                 [:f8 :!Of8]
+                 [:f9 :!Of9]
+                 [:f10 :!Of10]
+                 [:f11 :!Of11]
+                 [:f12 :!Of12]
+                 [:comma :!Ocomma]
+                 [:period :!Operiod]
+                 [:slash :!Oslash]]}
         {:des "fkey (essential)"
          :rules [:f-mode
                  [:z [:!Tspacebar]]]}]}
