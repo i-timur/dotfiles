@@ -10,6 +10,7 @@ vim.call('plug#begin', '~/.local/share/nvim/plugged')
 	Plug 'Xuyuanp/nerdtree-git-plugin'
 	Plug 'vim-airline/vim-airline'
 	Plug 'rebelot/kanagawa.nvim'
+	Plug 'vim-airline/vim-airline-themes'
 	--Always load the vim-devicons as the very last one.
 	Plug 'ryanoasis/vim-devicons'
 
