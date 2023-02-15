@@ -25,6 +25,7 @@
                  [:d :delete_or_backspace]
                  [:f :return_or_enter]
                  [:g :!Ctab]
+                 [:t :spacebar]
                  [:##j :down_arrow]
                  [:##k :up_arrow]
                  [:##h :left_arrow]
