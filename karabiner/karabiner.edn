@@ -9,6 +9,7 @@
              :semicolon-mode {:key :semicolon}
              :c-mode {:key :c}
              :q-mode {:key :q}
+             :v-mode {:key :v}
              :e-mode {:key :e}
              :a-mode {:key :a}
              :i-mode {:key :i}
@@ -145,6 +146,48 @@
                  [:comma :!CScomma]
                  [:period :!CSperiod]
                  [:slash :!CSslash]]}
+        {:des "vkey (cmd + ctrl)"
+         :rules [:v-mode
+                 [:3 :!CT3]
+                 [:4 :!CS4]
+                 [:5 :!CS5]
+                 [:6 :!CS6]
+                 [:7 :!CT7]
+                 [:8 :!CT8]
+                 [:9 :!CT9]
+                 [:0 :!CT0]
+                 [:q :!CTq]
+                 [:w :!CTw]
+                 [:e :!CTe]
+                 [:r :!CTr]
+                 [:t :!CTt]
+                 [:y :!CTy]
+                 [:u :!CTu]
+                 [:i :!CTi]
+                 [:o :!CTo]
+                 [:p :!CTp]
+                 [:open_bracket :!CTopen_bracket]
+                 [:close_bracket :!CTclose_bracket]
+                 [:a :!CTa]
+                 [:s :!CTs]
+                 [:d :!CTd]
+                 [:f :!CTf]
+                 [:g :!CTg]
+                 [:h :!CTh]
+                 [:j :!CTj]
+                 [:k :!CTk]
+                 [:l :!CTl]
+                 [:semicolon :!CTsemicolon]
+                 [:quote :!CTquote]
+                 [:z :!CTz]
+                 [:x :!CTx]
+                 [:c :!CTc]
+                 [:b :!CTb]
+                 [:n :!CTn]
+                 [:m :!CTm]
+                 [:comma :!CTcomma]
+                 [:period :!CTperiod]
+                 [:slash :!CTslash]]}
         {:des "ekey (cmd)"
          :rules [:e-mode
                  [:q :!Cq]
@@ -262,7 +305,7 @@
                  [:g :!Og]
                  [:h :!Oh]
                  [:j :!Oj]
-                 [:k :!Ok]
+                 [:k :!Oreturn_or_enter]
                  [:l :!Ol]
                  [:semicolon :!Osemicolon]
                  [:quote :!Oquote]
