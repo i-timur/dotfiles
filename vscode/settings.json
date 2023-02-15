@@ -26,7 +26,6 @@
   },
   "workbench.panel.defaultLocation": "bottom",
   "workbench.iconTheme": "vscode-icons",
-  "workbench.colorTheme": "Darcula",
   "workbench.editor.enablePreview": false,
   "javascript.updateImportsOnFileMove.enabled": "prompt",
   "typescript.updateImportsOnFileMove.enabled": "prompt",
@@ -38,5 +37,6 @@
     "vue": "html"
   },
   "javascript.preferences.quoteStyle": "single",
-  "typescript.preferences.quoteStyle": "single"
+  "typescript.preferences.quoteStyle": "single",
+  "workbench.colorTheme": "Default Light+ Experimental"
 }
