@@ -15,6 +15,7 @@
              :i-mode {:key :i}
              :f-mode {:key :f}
              :t-mode {:key :t}
+             :n-mode {:key :n}
              :d-mode {:key :d}}
  :main [{:des "skey"
          :rules [:s-mode
@@ -189,6 +190,18 @@
                  [:comma :!CTcomma]
                  [:period :!CTperiod]
                  [:slash :!CTslash]]}
+        {:des "nkey (numbers)"
+         :rules [:n-mode
+                 [:q :1]
+                 [:w :2]
+                 [:e :3]
+                 [:a :4]
+                 [:s :5]
+                 [:d :6]
+                 [:z :7]
+                 [:x :8]
+                 [:c :9]
+                 [:r :0]]}
         {:des "ekey (cmd)"
          :rules [:e-mode
                  [:q :!Cq]
