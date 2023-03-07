@@ -16,6 +16,7 @@ set -gx MANPAGER "nvim +Man!"
 # nvm
 set -gx NVM_DIR $HOME/.config/nvm
 [ -e $NVM_DIR/nvm.sh ]; and source $NVM_IDR/nvm.sh
+set -U nvm_default_version v18.14.2
 
 # Tide
 set -g tide_git_bg_color 268bd2
