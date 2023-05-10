@@ -37,6 +37,5 @@
     "vue": "html"
   },
   "javascript.preferences.quoteStyle": "single",
-  "typescript.preferences.quoteStyle": "single",
-  "workbench.colorTheme": "Default Light+ Experimental"
+  "typescript.preferences.quoteStyle": "single"
 }

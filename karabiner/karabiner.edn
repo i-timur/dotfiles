@@ -37,6 +37,8 @@
          :rules [[:!Cleft_shift :!Tspacebar]]}
         {:des "dkey (mouse)"
          :rules [:d-mode 
+                 [:j {:mkey {:vwheel 60}}] ; Scroll down
+                 [:k {:mkey {:vwheel -60}}] ; Scroll up
                  [:i :!Ckeypad_hyphen] ; Zoom out
                  [:o :!Ckeypad_plus] ; Zoom in
                  [:b {:pkey :button3}]]}
@@ -47,6 +49,7 @@
                  [:3 :!Sequal_sign]
                  [:4 :!S4]
                  [:5 :!S5]
+                 [:u :!Sgrave_accent_and_tilde] ; ~
                  [:6 :!S6] ; ^
                  [:7 :!S7] ; . (ru)
                  [:n :!S8] ; *
@@ -104,8 +107,45 @@
                  [:m :!Sm]]}
         {:des "ckey (cmd + option)"
          :rules [:c-mode
-                 [:h :!COleft_arrow]
-                 [:l :!COright_arrow]]}
+                 [:3 :!CO3]
+                 [:4 :!CO4]
+                 [:5 :!CO5]
+                 [:6 :!CO6]
+                 [:7 :!CO7]
+                 [:8 :!CO8]
+                 [:9 :!CO9]
+                 [:0 :!CO0]
+                 [:w :!COw]
+                 [:e :!COe]
+                 [:r :!COr]
+                 [:t :!COt]
+                 [:y :!COy]
+                 [:u :!COu]
+                 [:i :!COi]
+                 [:o :!COo]
+                 [:p :!COp]
+                 [:open_bracket :!COopen_bracket]
+                 [:close_bracket :!COclose_bracket]
+                 [:a :!COa]
+                 [:s :!COs]
+                 [:d :!COd]
+                 [:f :!COf]
+                 [:g :!COg]
+                 [:h :!COh]
+                 [:j :!COj]
+                 [:k :!COk]
+                 [:l :!COl]
+                 [:semicolon :!COsemicolon]
+                 [:quote :!COquote]
+                 [:z :!COz]
+                 [:x :!COx]
+                 [:v :!COv]
+                 [:b :!COb]
+                 [:n :!COn]
+                 [:m :!COm]
+                 [:q :!COq]
+                 [:comma :!COcomma]
+                 [:period :!COperiod]]}
         {:des "qkey (cmd + shift)"
          :rules [:q-mode
                  [:3 :!CS3]
@@ -145,6 +185,8 @@
                  [:b :!CSb]
                  [:n :!CSn]
                  [:m :!CSm]
+                 [:hyphen :!CShyphen]
+                 [:equal_sign :!CSequal_sign]
                  [:comma :!CScomma]
                  [:period :!CSperiod]
                  [:slash :!CSslash]]}
@@ -204,6 +246,7 @@
                  [:r :0]]}
         {:des "ekey (cmd)"
          :rules [:e-mode
+                 [:button1 :!Cbutton1]
                  [:q :!Cq]
                  [:w :!Cw]
                  [:r :!Cr]
