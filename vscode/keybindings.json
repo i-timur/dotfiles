@@ -26,6 +26,16 @@
     "when": "explorerViewletVisible && openEditorsFocus && !inputFocus"
   },
   {
+    "key": "ctrl+j",
+    "command": "workbench.files.action.focusFilesExplorer",
+    "when": "explorerViewletVisible && openEditorsFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "search.action.focusNextSearchResult",
+    "when": "hasSearchResult || inSearchEditor"
+  },
+  {
     "key": "ctrl+k",
     "command": "workbench.action.focusActiveEditorGroup",
     "when": "terminalFocus"
@@ -34,6 +44,11 @@
     "key": "ctrl+k",
     "command": "workbench.files.action.focusOpenEditorsView",
     "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "search.action.focusPreviousSearchResult",
+    "when": "hasSearchResult || inSearchEditor"
   },
   {
     "key": "ctrl+h",
@@ -98,5 +113,15 @@
   {
     "key": "ctrl+r",
     "command": "-workbench.action.openRecent"
+  },
+  {
+    "key": "down",
+    "command": "search.action.focusNextSearchResult",
+    "when": "hasSearchResult || inSearchEditor"
+  },
+  {
+    "key": "up",
+    "command": "search.action.focusPreviousSearchResult",
+    "when": "hasSearchResult || inSearchEditor"
   }
 ]

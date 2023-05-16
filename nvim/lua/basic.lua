@@ -32,6 +32,7 @@ set.expandtab = true
 set.smarttab = true
 set.autoindent = true
 set.cindent = true
+set.scrolloff = 7
 
 -- removes delay while switching between normal/insert modes
 set.ttimeout = true

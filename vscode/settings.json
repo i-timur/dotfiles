@@ -28,7 +28,7 @@
   "workbench.iconTheme": "vscode-icons",
   "workbench.editor.enablePreview": false,
   "javascript.updateImportsOnFileMove.enabled": "prompt",
-  "typescript.updateImportsOnFileMove.enabled": "prompt",
+  "typescript.updateImportsOnFileMove.enabled": "always",
   "vsicons.dontShowNewVersionMessage": true,
   "emmet.showAbbreviationSuggestions": true,
   "emmet.showExpandedAbbreviation": "always",
@@ -37,5 +37,10 @@
     "vue": "html"
   },
   "javascript.preferences.quoteStyle": "single",
-  "typescript.preferences.quoteStyle": "single"
+  "typescript.preferences.quoteStyle": "single",
+  "editor.inlineSuggest.enabled": true,
+  "settingsSync.ignoredSettings": [
+	
+  
+  ]
 }

@@ -185,6 +185,7 @@
                  [:b :!CSb]
                  [:n :!CSn]
                  [:m :!CSm]
+                 [:backslash :!CSbackslash]
                  [:hyphen :!CShyphen]
                  [:equal_sign :!CSequal_sign]
                  [:comma :!CScomma]
