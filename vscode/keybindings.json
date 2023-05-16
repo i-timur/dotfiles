@@ -27,13 +27,8 @@
   },
   {
     "key": "ctrl+j",
-    "command": "workbench.files.action.focusFilesExplorer",
-    "when": "explorerViewletVisible && openEditorsFocus && !inputFocus"
-  },
-  {
-    "key": "ctrl+j",
-    "command": "search.action.focusNextSearchResult",
-    "when": "hasSearchResult || inSearchEditor"
+    "command": "search.action.focusSearchList",
+    "when": "hasSearchResult && searchViewletVisible && searchViewletFocus"
   },
   {
     "key": "ctrl+k",
@@ -47,8 +42,8 @@
   },
   {
     "key": "ctrl+k",
-    "command": "search.action.focusPreviousSearchResult",
-    "when": "hasSearchResult || inSearchEditor"
+    "command": "workbench.action.findInFiles",
+    "when": "hasSearchResult && searchViewletVisible"
   },
   {
     "key": "ctrl+h",
@@ -117,11 +112,11 @@
   {
     "key": "down",
     "command": "search.action.focusNextSearchResult",
-    "when": "hasSearchResult || inSearchEditor"
+    "when": "hasSearchResult && searchViewletVisible && inSearchEditor"
   },
   {
     "key": "up",
     "command": "search.action.focusPreviousSearchResult",
-    "when": "hasSearchResult || inSearchEditor"
+    "when": "hasSearchResult && searchViewletVisible && inSearchEditor"
   }
 ]

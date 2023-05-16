@@ -23,6 +23,7 @@
                  [:o :!Cx] ; Cut
                  [:n :!Cv] ; Paste
                  [:a :!Cc] ; Copy
+                 [:v :!Stab]
                  [:d :delete_or_backspace]
                  [:f :return_or_enter]
                  [:g :!Ctab]
@@ -75,7 +76,7 @@
                  [:x :!Sbackslash]
                  [:c :!S7]
                  [:v :!Scomma]
-                 [:b [:slash :slash :spacebar]]]}
+                 [:b :!S1]]}
         {:des "semicolon (shift)"
          :rules [:semicolon-mode
                  [:q :!Sq]
