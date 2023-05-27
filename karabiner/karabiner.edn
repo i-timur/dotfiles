@@ -32,6 +32,8 @@
                  [:f :return_or_enter]
                  [:g :!Ctab]
                  [:t :spacebar]
+                 [:e {:consumer_key_code true :key :volume_increment}]
+                 [:b {:consumer_key_code true :key :volume_decrement}]
                  [:##j :down_arrow]
                  [:##k :up_arrow]
                  [:##h :left_arrow]
