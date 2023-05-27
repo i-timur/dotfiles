@@ -118,5 +118,10 @@
     "key": "up",
     "command": "search.action.focusPreviousSearchResult",
     "when": "hasSearchResult && searchViewletVisible && inSearchEditor"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
   }
 ]
