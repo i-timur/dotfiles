@@ -2,7 +2,7 @@
   "editor.fontSize": 16,
   "editor.tabSize": 4,
   "editor.insertSpaces": false,
-  "editor.detectIndentation": false,
+  "editor.detectIndentation": true,
   "editor.wordWrap": "on",
   "editor.minimap.enabled": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -16,13 +16,13 @@
   "terminal.integrated.fontFamily": "'MesloLGS NF'",
   "files.autoSave": "afterDelay",
   "files.exclude": {
-    "**/node_modules/": true,
-    "**/.git": true,
-    "**/.gitkeep": true,
-    "**/.DS_Store": true,
-    "**/package-lock.json": true,
-    "**/yarn.lock": true,
-    "**/dist": true
+    "**/node_modules/": false,
+    "**/.git": false,
+    "**/.gitkeep": false,
+    "**/.DS_Store": false,
+    "**/package-lock.json": false,
+    "**/yarn.lock": false,
+    "**/dist": false
   },
   "workbench.panel.defaultLocation": "bottom",
   "workbench.iconTheme": "vscode-icons",
@@ -39,7 +39,6 @@
   "javascript.preferences.quoteStyle": "single",
   "typescript.preferences.quoteStyle": "single",
   "editor.inlineSuggest.enabled": true,
-  "settingsSync.ignoredExtensions": [
-	
-  ]
+  "settingsSync.ignoredExtensions": [],
+  "settingsSync.ignoredSettings": []
 }

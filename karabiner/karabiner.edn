@@ -15,6 +15,7 @@
              :i-mode {:key :i}
              :f-mode {:key :f}
              :t-mode {:key :t}
+             :b-mode {:key :b}
              :n-mode {:key :n}
              :fn-mode {:apple_vendor_top_case_keyboard true
                        :key :fn}
@@ -307,6 +308,49 @@
                  [:8 :!C8]
                  [:9 :!C9]
                  [:0 :!C0]]}
+        {:des "bkey (shift + option)"
+         :rules [:b-mode
+                 [:2 :!SO2]
+                 [:3 :!SO3]
+                 [:4 :!SO4]
+                 [:5 :!SO5]
+                 [:6 :!SO6]
+                 [:7 :!SO7]
+                 [:8 :!SO8]
+                 [:9 :!SO9]
+                 [:0 :!SO0]
+                 [:q :!SOq]
+                 [:w :!SOw]
+                 [:e :!SOe]
+                 [:r :!SOr]
+                 [:t :!SOt]
+                 [:i :!SOi]
+                 [:o :!SOo]
+                 [:y :!SOy]
+                 [:u :!SOu]
+                 [:p :!SOp]
+                 [:open_bracket :!SOopen_bracket]
+                 [:close_bracket :!SOclose_bracket]
+                 [:s :!SOs]
+                 [:d :!SOd]
+                 [:f :!SOf]
+                 [:g :!SOg]
+                 [:h :!SOh]
+                 [:j :!SOj]
+                 [:k :!SOk]
+                 [:l :!SOl]
+                 [:semicolon :!SOsemicolon]
+                 [:quote :!SOquote]
+                 [:z :!SOz]
+                 [:x :!SOx]
+                 [:c :!SOc]
+                 [:v :!SOv]
+                 [:a :!SOa]
+                 [:n :!SOn]
+                 [:m :!SOm]
+                 [:comma :!SOcomma]
+                 [:period :!SOperiod]
+                 [:slash :!SOslash]]}
         {:des "akey (ctrl)"
          :rules [:a-mode
                  [:2 :!T2]
@@ -361,6 +405,8 @@
                  [:8 :!O8]
                  [:9 :!O9]
                  [:0 :!O0]
+                 [:equal_sign :!Oequal_sign]
+                 [:hyphen :!Ohyphen]
                  [:q :!Oq]
                  [:w :!Ow]
                  [:e :!Oe]
