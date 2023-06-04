@@ -1,17 +1,19 @@
-local Plug = vim.fn['plug#']
+-- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
-vim.call('plug#begin', '~/.local/share/nvim/plugged')
+-- Only required if you have packer configured as `opt`
+vim.cmd [[packadd packer.nvim]]
 
-	Plug 'christoomey/vim-tmux-navigator'
-	Plug('neoclide/coc.nvim', {branch = 'release'})
-	Plug 'preservim/nerdtree'
-	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-	Plug 'preservim/nerdcommenter'
-	Plug 'Xuyuanp/nerdtree-git-plugin'
-	Plug 'vim-airline/vim-airline'
-	Plug 'rebelot/kanagawa.nvim'
-	Plug 'vim-airline/vim-airline-themes'
-	--Always load the vim-devicons as the very last one.
-	Plug 'ryanoasis/vim-devicons'
+return require('packer').startup(function(use)
+    -- Packer can manage itself
+    use 'wbthomason/packer.nvim'
 
-vim.call('plug#end')
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.1',
+        -- or                            , branch = '0.1.x',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
+
+    use({ 'rose-pine/neovim', as = 'rose-pine' })
+    vim.cmd('colorscheme rose-pine')
+
+end)

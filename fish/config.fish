@@ -68,3 +68,5 @@ alias gi "git init"
 alias gl "git pull"
 alias gn "git clone"
 
+set -gx PATH $HOME/.cargo/bin:$PATH
+
