@@ -1,3 +1,8 @@
+if not status is-interactive
+    # if login shell
+    # can be useful with tmux
+end
+
 set fish_greeting ""
 
 # XDG
@@ -16,6 +21,7 @@ set -gx MANPAGER "nvim +Man!"
 # nvm
 set -gx NVM_DIR $HOME/.config/nvm
 [ -e $NVM_DIR/nvm.sh ]; and source $NVM_IDR/nvm.sh
+# IMPORTANT! Default node version has to be set manually
 set -U nvm_default_version v18.14.2
 
 # Tide
@@ -68,5 +74,9 @@ alias gi "git init"
 alias gl "git pull"
 alias gn "git clone"
 
-set -gx PATH $HOME/.cargo/bin:$PATH
+# Set variables here
+if not set -q _SET_PROFILE
+    fish_add_path $HOME/.cargo/bin
+    set -gx _SET_PROFILE "yes"
+end
 
