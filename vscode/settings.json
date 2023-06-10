@@ -1,44 +1,58 @@
 {
-  "editor.fontSize": 16,
-  "editor.tabSize": 4,
-  "editor.insertSpaces": false,
-  "editor.detectIndentation": true,
-  "editor.wordWrap": "on",
-  "editor.minimap.enabled": false,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
-  "editor.lineNumbers": "relative",
-  "editor.fontLigatures": false,
-  "editor.hover.enabled": true,
-  "prettier.semi": true,
-  "prettier.singleQuote": true,
-  "terminal.integrated.tabs.enabled": true,
-  "terminal.integrated.fontFamily": "'MesloLGS NF'",
-  "files.autoSave": "afterDelay",
-  "files.exclude": {
-    "**/node_modules/": false,
-    "**/.git": false,
-    "**/.gitkeep": false,
-    "**/.DS_Store": false,
-    "**/package-lock.json": false,
-    "**/yarn.lock": false,
-    "**/dist": false
-  },
-  "workbench.panel.defaultLocation": "bottom",
-  "workbench.iconTheme": "vscode-icons",
-  "workbench.editor.enablePreview": false,
-  "javascript.updateImportsOnFileMove.enabled": "prompt",
-  "typescript.updateImportsOnFileMove.enabled": "prompt",
-  "vsicons.dontShowNewVersionMessage": true,
-  "emmet.showAbbreviationSuggestions": true,
-  "emmet.showExpandedAbbreviation": "always",
-  "emmet.includeLanguages": {
-    "vue-html": "html",
-    "vue": "html"
-  },
-  "javascript.preferences.quoteStyle": "single",
-  "typescript.preferences.quoteStyle": "single",
-  "editor.inlineSuggest.enabled": true,
-  "settingsSync.ignoredExtensions": [],
-  "settingsSync.ignoredSettings": []
+	"editor.fontSize": 16,
+	"editor.tabSize": 4,
+	"editor.indentSize": "tabSize",
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"editor.wordWrap": "on",
+	"editor.cursorSurroundingLines": 8,
+	"editor.minimap.enabled": false,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true,
+	"editor.lineNumbers": "relative",
+	"editor.fontLigatures": false,
+	"editor.hover.enabled": true,
+	"prettier.semi": true,
+	"prettier.singleQuote": true,
+	"terminal.integrated.tabs.enabled": true,
+	"terminal.integrated.fontFamily": "'MesloLGS NF'",
+	"files.autoSave": "afterDelay",
+	"files.exclude": {
+		"**/node_modules/": false,
+		"**/.git": false,
+		"**/.gitkeep": false,
+		"**/.DS_Store": false,
+		"**/package-lock.json": false,
+		"**/yarn.lock": false,
+		"**/dist": false
+	},
+	"workbench.panel.defaultLocation": "bottom",
+	"workbench.iconTheme": "vscode-icons",
+	"workbench.editor.enablePreview": false,
+	"javascript.updateImportsOnFileMove.enabled": "prompt",
+	"typescript.updateImportsOnFileMove.enabled": "prompt",
+	"vsicons.dontShowNewVersionMessage": true,
+	"emmet.showAbbreviationSuggestions": true,
+	"emmet.showExpandedAbbreviation": "always",
+	"emmet.includeLanguages": {
+		"vue-html": "html",
+		"vue": "html"
+	},
+	"javascript.preferences.quoteStyle": "single",
+	"typescript.preferences.quoteStyle": "single",
+	"editor.inlineSuggest.enabled": true,
+	"settingsSync.ignoredSettings": [
+		"-C_Cpp.codeAnalysis.maxMemory"
+	],
+	"vim.leader": "space",
+	"vim.normalModeKeyBindings": [
+		{
+			"before": ["<C-d>"],
+			"after": ["<C-d>", "z", "z"]
+		},
+		{
+			"before": ["<C-u>"],
+			"after": ["<C-u>", "z", "z"]
+		}
+	]
 }
