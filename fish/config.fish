@@ -1,9 +1,4 @@
-if not status is-interactive
-    # if login shell
-    # can be useful with tmux
-end
-
-set fish_greeting ""
+set -g fish_greeting ""
 
 # XDG
 set -gx XDG_CONFIG_HOME $HOME/.config
@@ -14,15 +9,6 @@ set -gx TERM xterm-256color
 # EDITOR
 set -gx EDITOR nvim
 set -gx VISUAL nvim
-
-# Man pages
-set -gx MANPAGER "nvim +Man!"
-
-# nvm
-set -gx NVM_DIR $HOME/.config/nvm
-[ -e $NVM_DIR/nvm.sh ]; and source $NVM_IDR/nvm.sh
-# IMPORTANT! Default node version has to be set manually
-set -U nvm_default_version v18.14.2
 
 # Tide
 set -g tide_git_bg_color 268bd2
@@ -46,6 +32,36 @@ set -g tide_git_stash_color 000000
 set -g tide_git_untracked_color 000000
 set -g tide_git_upstream_color 000000
 
+# Variables
+set -gx ANDROID_SDK_ROOT $HOME/Library/Android/sdk
+
+# Paths
+fish_add_path $HOME/.cargo/bin
+fish_add_path $ANDROID_SDK_ROOT/tools/bin
+fish_add_path $ANDROID_SDK_ROOT/platform-tools
+fish_add_path $ANDROID_SDK_ROOT/emulator
+
+# Man pages
+set -gx MANPAGER "nvim +Man!"
+
+# NVM
+# IMPORTANT! Default node version has to be set manually
+set -U nvm_default_version v18.14.2
+
+# The reason for this line is that tmux runs this config when it starts so
+# $PATH is always reset. This makes nvm broken because nvm node version is
+# placed at the last as it doesn't run second time. Don't use it in   your
+# config.
+nvm use system && nvm use $nvm_default_version 
+
+# Look up for local node version
+function __check_rvm --on-variable PWD --description 'Do nvm stuff'
+    status --is-command-substitution; and return
+
+    if test -f .nvmrc; and test -r .nvmrc;
+        nvm use
+    end
+end
 # Aliases
 
 # General
@@ -73,10 +89,4 @@ alias gpom "git push origin master"
 alias gi "git init"
 alias gl "git pull"
 alias gn "git clone"
-
-# Set variables here
-if not set -q _SET_PROFILE
-    fish_add_path $HOME/.cargo/bin
-    set -gx _SET_PROFILE "yes"
-end
 
