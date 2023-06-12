@@ -34,6 +34,7 @@ set -g tide_git_upstream_color 000000
 
 # Variables
 set -gx ANDROID_SDK_ROOT $HOME/Library/Android/sdk
+set -gx JAVA_HOME (/usr/libexec/java_home -v17)
 
 # Paths
 fish_add_path $HOME/.cargo/bin
@@ -50,9 +51,10 @@ set -U nvm_default_version v18.14.2
 
 # The reason for this line is that tmux runs this config when it starts so
 # $PATH is always reset. This makes nvm broken because nvm node version is
-# placed at the last as it doesn't run second time. Don't use it in   your
-# config.
-nvm use system && nvm use $nvm_default_version 
+# placed at the last.
+if set -q TMUX
+    nvm use system && nvm use $nvm_default_version 
+end
 
 # Look up for local node version
 function __check_rvm --on-variable PWD --description 'Do nvm stuff'
