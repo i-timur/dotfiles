@@ -47,7 +47,7 @@ set -gx MANPAGER "nvim +Man!"
 
 # NVM
 # IMPORTANT! Default node version has to be set manually
-set -U nvm_default_version v18.14.2
+set -U nvm_default_version lts
 
 # The reason for this line is that tmux runs this config when it starts so
 # $PATH is always reset. This makes nvm broken because nvm node version is
