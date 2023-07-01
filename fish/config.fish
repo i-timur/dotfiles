@@ -54,6 +54,7 @@ set -U nvm_default_version lts
 # placed at the last.
 if set -q TMUX
     nvm use system && nvm use $nvm_default_version 
+    clear
 end
 
 # Look up for local node version
@@ -84,11 +85,14 @@ alias gss "git show --word-diff=color"
 alias gb "git branch"
 alias ga "git add"
 alias gc "git commit"
-alias gl "git log --pretty oneline --abbrev-commit --graph --decorate"
+alias glg "git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)' --all"
+alias glgt "git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'"
 alias gp "git push"
 alias gpo "git push origin"
 alias gpom "git push origin master"
 alias gi "git init"
 alias gl "git pull"
 alias gn "git clone"
+
+command -qv htop && alias top htop
 

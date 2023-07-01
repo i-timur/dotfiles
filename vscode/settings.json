@@ -52,5 +52,6 @@
       "before": ["<C-u>"],
       "after": ["<C-u>", "z", "z"]
     }
-  ]
+  ],
+  "diffEditor.ignoreTrimWhitespace": false
 }
