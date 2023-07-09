@@ -16,6 +16,7 @@ end
 function peco_change_directory
   begin
     echo $HOME/.config
+    echo $HOME/.dotfiles
     ghq list -p
     ls -ad */|perl -pe "s#^#$PWD/#"|grep -v \.git
     ls -ad $HOME/main/projects/* |grep -v \.git
