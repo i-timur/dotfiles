@@ -93,6 +93,7 @@ alias gpom "git push origin master"
 alias gi "git init"
 alias gl "git pull"
 alias gn "git clone"
+alias gk "git checkout"
 
 command -qv htop && alias top htop
 
