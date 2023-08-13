@@ -34,10 +34,6 @@
   "vsicons.dontShowNewVersionMessage": true,
   "emmet.showAbbreviationSuggestions": true,
   "emmet.showExpandedAbbreviation": "always",
-  "emmet.includeLanguages": {
-    "vue-html": "html",
-    "vue": "html"
-  },
   "javascript.preferences.quoteStyle": "single",
   "typescript.preferences.quoteStyle": "single",
   "editor.inlineSuggest.enabled": true,
@@ -53,5 +49,14 @@
       "after": ["<C-u>", "z", "z"]
     }
   ],
-  "diffEditor.ignoreTrimWhitespace": false
+  "diffEditor.ignoreTrimWhitespace": false,
+  "window.commandCenter": false,
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html",
+    "vue": "html"
+  },
+  "tailwindCSS.experimental.configFile": ".nuxt/tailwind.config.ts",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  }
 }

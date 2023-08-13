@@ -94,6 +94,9 @@ alias gi "git init"
 alias gl "git pull"
 alias gn "git clone"
 alias gk "git checkout"
+alias gkm "git checkout master"
+alias gt "git stash"
+alias gtu "git stash -u"
 
 command -qv htop && alias top htop
 
