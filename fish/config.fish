@@ -34,10 +34,8 @@ set -g tide_git_upstream_color 000000
 
 # Variables
 set -gx ANDROID_SDK_ROOT $HOME/Library/Android/sdk
-set -gx JAVA_HOME (/usr/libexec/java_home -v17)
+set -gx JAVA_HOME (/usr/libexec/java_home -v1.8)
 
-# Paths
-fish_add_path $HOME/.cargo/bin
 fish_add_path $ANDROID_SDK_ROOT/tools/bin
 fish_add_path $ANDROID_SDK_ROOT/platform-tools
 fish_add_path $ANDROID_SDK_ROOT/emulator
@@ -47,13 +45,15 @@ set -gx MANPAGER "nvim +Man!"
 
 # NVM
 # IMPORTANT! Default node version has to be set manually
-set -U nvm_default_version lts
+# set -U nvm_default_version lts
+set -U nvm_default_version v18
 
 # The reason for this line is that tmux runs this config when it starts so
 # $PATH is always reset. This makes nvm broken because nvm node version is
 # placed at the last.
 if set -q TMUX
-    nvm use system && nvm use $nvm_default_version 
+    # nvm use system && nvm use $nvm_default_version 
+    nvm use v18
     clear
 end
 
@@ -99,4 +99,5 @@ alias gt "git stash"
 alias gtu "git stash -u"
 
 command -qv htop && alias top htop
+command -qv nvim && alias vim nvim
 
