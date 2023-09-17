@@ -1,1 +1,10 @@
-set number relativenumber
+set number
+set relativenumber
+set scrolloff=8
+set incsearch
+
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+
+unmap <C-h>
+

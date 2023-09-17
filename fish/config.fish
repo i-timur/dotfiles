@@ -33,12 +33,24 @@ set -g tide_git_untracked_color 000000
 set -g tide_git_upstream_color 000000
 
 # Variables
+set -gx ANDROID $HOME/Library/Android
+set -gx ANDROID_HOME $HOME/Library/Android/sdk
 set -gx ANDROID_SDK_ROOT $HOME/Library/Android/sdk
-set -gx JAVA_HOME (/usr/libexec/java_home -v1.8)
+set -gx JAVA_HOME (/usr/libexec/java_home -v17.0.8)
+set -gx GRADLE_HOME /usr/local/gradle/gradle-7.6.1
 
+# set -gx JAVA_OPTS "-XX:+IgnoreUnrecognizedVMOptions --add-modules java.se.ee"
+
+fish_add_path $JAVA_HOME/bin
+fish_add_path $ANDROID_SDK_ROOT/tools
 fish_add_path $ANDROID_SDK_ROOT/tools/bin
 fish_add_path $ANDROID_SDK_ROOT/platform-tools
 fish_add_path $ANDROID_SDK_ROOT/emulator
+fish_add_path $AN/cmdline-tools/latest/bin
+fish_add_path $GRADLE_HOME/bin
+fish_add_path $HOME/.cargo/bin
+fish_add_path '/Applications/WebStorm.app/Contents/MacOS'
+fish_add_path '/Applications/RustRover 2023.2 EAP.app/Contents/MacOS'
 
 # Man pages
 set -gx MANPAGER "nvim +Man!"
@@ -78,7 +90,8 @@ alias q "exit"
 alias ni "npm install"
 alias nd "npm run start"
 alias nb "npm run build"
-
+alias wt 'webstorm'
+alias ro 'rustrover'
 # Git
 alias gs "git status --short"
 alias gss "git show --word-diff=color"
@@ -95,9 +108,14 @@ alias gl "git pull"
 alias gn "git clone"
 alias gk "git checkout"
 alias gkm "git checkout master"
+alias gkd "git checkout dev"
 alias gt "git stash"
 alias gtu "git stash -u"
 
 command -qv htop && alias top htop
 command -qv nvim && alias vim nvim
 
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH

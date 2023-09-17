@@ -30,7 +30,7 @@
   "workbench.iconTheme": "vscode-icons",
   "workbench.editor.enablePreview": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "typescript.updateImportsOnFileMove.enabled": "prompt",
+  "typescript.updateImportsOnFileMove.enabled": "always",
   "vsicons.dontShowNewVersionMessage": true,
   "emmet.showAbbreviationSuggestions": true,
   "emmet.showExpandedAbbreviation": "always",
@@ -51,12 +51,17 @@
   ],
   "diffEditor.ignoreTrimWhitespace": false,
   "window.commandCenter": false,
-  "tailwindCSS.includeLanguages": {
-    "plaintext": "html",
-    "vue": "html"
+  "css.validate": false,
+  "editor.quickSuggestions": {
+    "strings": true
   },
-  "tailwindCSS.experimental.configFile": ".nuxt/tailwind.config.ts",
+  "tailwindCSS.includeLanguages": {
+    "vue": "html",
+    "vue-html": "html"
+  },
+  "tailwindCSS.experimental.configFile": "./tailwind.config.ts",
   "files.associations": {
     "*.css": "tailwindcss"
-  }
+  },
+  "window.zoomLevel": -1
 }
