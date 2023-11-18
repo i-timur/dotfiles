@@ -74,7 +74,7 @@ set -U nvm_default_version v18
 
 # The reason for this line is that tmux runs this config when it starts so
 # $PATH is always reset. This makes nvm broken because nvm node version is
-# placed at the last.
+# placed in the end of PATH string.
 if set -q TMUX
     # nvm use system && nvm use $nvm_default_version 
     nvm use v18
@@ -130,7 +130,9 @@ command -qv webstorm && alias wt webstorm
 command -qv rustrover && alias ro rustrover
 command -qv phpstorm && alias pt phpstorm
 command -qv pycharm && alias pc pycharm
+command -qv pip3 && alias pip pip3
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
