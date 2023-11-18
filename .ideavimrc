@@ -8,3 +8,5 @@ nnoremap <C-u> <C-u>zz
 
 unmap <C-h>
 
+map <C-j> <Action>(ShowErrorDescription)
+
