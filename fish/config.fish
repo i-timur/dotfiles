@@ -33,21 +33,17 @@ set -g tide_git_untracked_color 000000
 set -g tide_git_upstream_color 000000
 
 # Variables
-# set -gx ANDROID $HOME/Library/Android
-set -ge ANDROID
-# set -gx ANDROID_HOME $HOME/Library/Android/sdk
-set -ge ANDROID_HOME
+set -gx ANDROID $HOME/Library/Android
+set -gx ANDROID_HOME $HOME/Library/Android/sdk
 set -gx ANDROID_SDK_ROOT $HOME/Library/Android/sdk
-# set -gx HOME_ANDROID $HOME/Library/Android/sdk
-set -ge HOME_ANDROID
-# set -gx JAVA_HOME (/usr/libexec/java_home -v17.0.8)
-set -gx JAVA_HOME (/usr/libexec/java_home -v11)
+set -gx HOME_ANDROID $HOME/Library/Android/sdk
+set -gx JAVA_HOME (/usr/libexec/java_home -v17.0.8)
+# set -gx JAVA_HOME (/usr/libexec/java_home -v11)
 set -gx GRADLE_HOME /usr/local/gradle/gradle-7.6.1
 set -gx PYTHONPATH /usr/bin/python3
 
 # set -gx JAVA_OPTS "-XX:+IgnoreUnrecognizedVMOptions --add-modules java.se.ee"
 
-fish_add_path $JAVA_HOME/bin
 fish_add_path $ANDROID_SDK_ROOT
 fish_add_path $ANDROID_SDK_ROOT/tools
 fish_add_path $ANDROID_SDK_ROOT/tools/bin
@@ -59,10 +55,12 @@ fish_add_path $ANDROID_SDK_ROOT/sources
 fish_add_path $ANDROID_SDK_ROOT/bundle-tool
 fish_add_path $GRADLE_HOME/bin
 fish_add_path $HOME/.cargo/bin
+fish_add_path $HOME/yandex-cloud/bin
 fish_add_path '/Applications/WebStorm.app/Contents/MacOS'
 fish_add_path '/Applications/RustRover 2023.2 EAP.app/Contents/MacOS'
 fish_add_path '/Applications/PhpStorm.app/Contents/MacOS'
 fish_add_path '/Applications/PyCharm.app/Contents/MacOS'
+fish_add_path $JAVA_HOME/bin
 
 # Man pages
 set -gx MANPAGER "nvim +Man!"
@@ -114,6 +112,7 @@ alias glgt "git log --graph --abbrev-commit --decorate --format=format:'%C(bold 
 alias gp "git push"
 alias gpo "git push origin"
 alias gpom "git push origin master"
+alias gpod "git push origin dev"
 alias gi "git init"
 alias gl "git pull"
 alias gn "git clone"
@@ -122,7 +121,6 @@ alias gkm "git checkout master"
 alias gkd "git checkout dev"
 alias gt "git stash"
 alias gtu "git stash -u"
-
 command -qv htop && alias top htop
 command -qv nvim && alias vim nvim
 command -qv python3 && alias py python3

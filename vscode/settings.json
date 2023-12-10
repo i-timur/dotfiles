@@ -62,6 +62,5 @@
   "tailwindCSS.experimental.configFile": "./tailwind.config.ts",
   "files.associations": {
     "*.css": "tailwindcss"
-  },
-  "window.zoomLevel": -1
+  }
 }
