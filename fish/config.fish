@@ -60,6 +60,7 @@ fish_add_path '/Applications/WebStorm.app/Contents/MacOS'
 fish_add_path '/Applications/RustRover 2023.2 EAP.app/Contents/MacOS'
 fish_add_path '/Applications/PhpStorm.app/Contents/MacOS'
 fish_add_path '/Applications/PyCharm.app/Contents/MacOS'
+fish_add_path '/Applications/IntelliJ IDEA.app/Contents/MacOS'
 fish_add_path $JAVA_HOME/bin
 
 # Man pages
@@ -100,6 +101,7 @@ alias q "exit"
 alias ni "npm install"
 alias nd "npm run start"
 alias nb "npm run build"
+alias ycs3='aws s3 --endpoint-url=https://storage.yandexcloud.net'
 
 # Git
 alias gs "git status --short"
@@ -121,6 +123,7 @@ alias gkm "git checkout master"
 alias gkd "git checkout dev"
 alias gt "git stash"
 alias gtu "git stash -u"
+
 command -qv htop && alias top htop
 command -qv nvim && alias vim nvim
 command -qv python3 && alias py python3
