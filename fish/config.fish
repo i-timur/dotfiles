@@ -38,11 +38,8 @@ set -gx ANDROID_HOME $HOME/Library/Android/sdk
 set -gx ANDROID_SDK_ROOT $HOME/Library/Android/sdk
 set -gx HOME_ANDROID $HOME/Library/Android/sdk
 set -gx JAVA_HOME (/usr/libexec/java_home -v17.0.8)
-# set -gx JAVA_HOME (/usr/libexec/java_home -v11)
 set -gx GRADLE_HOME /usr/local/gradle/gradle-7.6.1
 set -gx PYTHONPATH /usr/bin/python3
-
-# set -gx JAVA_OPTS "-XX:+IgnoreUnrecognizedVMOptions --add-modules java.se.ee"
 
 fish_add_path $ANDROID_SDK_ROOT
 fish_add_path $ANDROID_SDK_ROOT/tools
@@ -69,14 +66,14 @@ set -gx MANPAGER "nvim +Man!"
 # NVM
 # IMPORTANT! Default node version has to be set manually
 # set -U nvm_default_version lts
-set -U nvm_default_version v18
+set -U nvm_default_version v20
 
 # The reason for this line is that tmux runs this config when it starts so
 # $PATH is always reset. This makes nvm broken because nvm node version is
 # placed in the end of PATH string.
 if set -q TMUX
     # nvm use system && nvm use $nvm_default_version 
-    nvm use v18
+    nvm use $nvm_default_version 
     clear
 end
 
@@ -88,6 +85,7 @@ function __check_rvm --on-variable PWD --description 'Do nvm stuff'
         nvm use
     end
 end
+
 # Aliases
 
 # General
@@ -123,7 +121,9 @@ alias gkm "git checkout master"
 alias gkd "git checkout dev"
 alias gt "git stash"
 alias gtu "git stash -u"
+alias gr "git rm --cached (git ls-files -i -c --exclude-from=.gitignore)"
 
+# Bins
 command -qv htop && alias top htop
 command -qv nvim && alias vim nvim
 command -qv python3 && alias py python3
